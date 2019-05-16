@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>添加书籍</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+</head>
+<body>
+    <div class = 'container'>
+    <h2>添加书籍</h2>
+        <form action="{% url 'booktest:addbook' %}" method="post">
+            书名:<input type="text" name = 'title'>
+            <hr>
+            发行时间:<input type="text" name = 'pub_date'>
+            <hr>
+            <input type="submit" value="提交">
+            <hr>
+
+        </form>
+
+    </div>
+
+</body>
+</html>
