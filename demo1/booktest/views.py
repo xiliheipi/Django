@@ -112,3 +112,11 @@ def addhero(request,id):
 
 
         return HttpResponseRedirect('/booktest/detail/%s/'%(id,))
+
+# 更新书籍视图函数
+def updatebook(request):
+
+    return HttpResponse('更新书成功')
+
+
+

@@ -22,7 +22,13 @@ urlpatterns =[
     # 删除书 的路由
     url(r'^deletebook/(\d+)/$', views.deletebook,name = 'deletebook'),
     #添加书 的路由
-    url(r'^addbook/$',views.addbook, name = 'addbook')
+    url(r'^addbook/$',views.addbook, name = 'addbook'),
+
+
+    #更改书名
+    url(r'^updatebook/$',views.updatebook,name = 'updatebook'),
+
+
 
 ]
 
