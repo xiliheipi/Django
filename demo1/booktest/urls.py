@@ -13,20 +13,21 @@ urlpatterns =[
     url(r'^list/$', views.list,name='list'),
     url(r'^detail/(\d+)/$',views.detail,name='detail'),
 
-    # 删除英雄
+    # 删除角色
     url(r'^deletehero/(\d+)/$', views.deletehero,name = 'deletehero'),
-    # 添加英雄
+    # 添加角色
     url(r'^addhero/(\d+)/$',views.addhero,name = 'addhero'),
+#     编辑角色
+    url(r'^edithero/(\d+)/$',views.edithero, name = 'edithero'),
 
-
-    # 删除书 的路由
+    # 删除书
     url(r'^deletebook/(\d+)/$', views.deletebook,name = 'deletebook'),
-    #添加书 的路由
+    #添加书
     url(r'^addbook/$',views.addbook, name = 'addbook'),
+    #编辑书
+    url(r'^edtibook/(\d+)/$',views.edtibook,name = 'edtibook'),
 
 
-    #更改书名
-    url(r'^updatebook/$',views.updatebook,name = 'updatebook'),
 
 
 

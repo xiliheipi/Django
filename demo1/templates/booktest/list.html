@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>列表页</title>
+        <link rel="stylesheet" href="/static/css/main.css">
 
 </head>
 <body>
@@ -16,8 +17,8 @@
             {# <li><a href="/booktest/detail/{{book.id}}/">{{ book.title }}</a></li> #}
             <li><a href="{% url 'booktest:detail' book.id %}">{{ book.title }}---{{ book.pub_date }}</a>
             <a href="{% url 'booktest:deletebook' book.id %}">删除</a>
-
-
+                <br>
+                <a href="{% url 'booktest:edtibook' book.id %}">编辑</a>
             </li>
 
         {% empty %}
@@ -32,8 +33,6 @@
 
     <br>
     <a href="{% url 'booktest:addbook' %}">添加书籍</a>
-    <br>
-    <a href="{% url 'booktest:updatebook' %}">更改书</a>
     <br>
     {# <a href="/booktest/index/">去主页</a> #}
     <a href="{% url 'booktest:index' %}">去主页</a>

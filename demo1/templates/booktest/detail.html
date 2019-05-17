@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <title>详情页</title>
+
+        <link rel="stylesheet" href="/static/css/main.css">
 </head>
 <body>
     <script src="/static/js/main.js"></script>
@@ -15,12 +17,14 @@
         {% for hero in book.heroinfo_set.all %}
         <li>{{ hero.name }}---{{hero.gender}}--{{hero.skill}}
             <a href="{% url 'booktest:deletehero' hero.id %}">删除</a>
-
+            <a href="{% url 'booktest:edithero' hero.id %}">编辑角色</a>
         </li>
         {% empty %}
             <li>没有角色</li>
         {% endfor %}
         <a href="{% url 'booktest:addhero' book.id %}">添加角色</a>
+        <br>
+
 
     </ul>
 

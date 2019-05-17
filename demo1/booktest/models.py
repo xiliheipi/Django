@@ -34,3 +34,29 @@ class HeroInfo(models.Model):
 
 
 
+
+# --------------------封装的方法------------------------------
+
+# class ManageExt(models.Manager):
+#     def createstmodel2(self, _title):
+#         t = self.model()
+#         t.title = _title
+#         t.save()
+#
+#     def deletetestmodel2(self, _pk):
+#         self.get(pk = _pk).delete()
+#
+#
+# class TestModel(models.Model):
+#     title = models.CharField(max_length=20)
+#     # 添加字段 字段为模型管理器
+#     objects = models.Manager()
+#     #应为 manage2 继承了 manage 并且扩展了功能
+#     manage2 = ManageExt()
+#     #在模型类中封装方法，减少重复代码的编写
+#     @classmethod
+#     def createtestmodel(cls,_title):
+#         t = cls(title = _title)
+#         t.title = _title
+#         t.save()
+

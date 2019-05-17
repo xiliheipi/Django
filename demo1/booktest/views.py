@@ -113,10 +113,42 @@ def addhero(request,id):
 
         return HttpResponseRedirect('/booktest/detail/%s/'%(id,))
 
-# 更新书籍视图函数
-def updatebook(request):
+# 编辑书籍
+def edtibook(request,id):
+    book = BookInfo.objects.get(pk = id)
 
-    return HttpResponse('更新书成功')
+    if request.method == 'GET':
+        return render(request,'booktest/editbook.html',{'book':book})
+
+    elif request.method == 'POST':
+        book.title = request.POST['title']
+        book.pub_date = request.POST['pub_date']
+        book.save()
+
+        return HttpResponseRedirect('/booktest/list/')
+
+
+
+
+# 编辑英雄
+def edithero(request,id):
+    hero = HeroInfo.objects.get(pk = id)
+
+    if request.method == 'GET':
+
+        return render(request, 'booktest/edithero.html', {'hero': hero})
+
+    elif request.method == 'POST':
+
+        hero.name = request.POST['username']
+        hero.gender = request.POST['sex']
+        hero.skill = request.POST['skill']
+        hero.save()
+
+        return HttpResponseRedirect('/booktest/detail/%s/'%(hero.book.id,))
+
+
+
 
 
 
