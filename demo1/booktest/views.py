@@ -26,11 +26,6 @@ def index(request):
     context = {'username':'黑皮'}
     return render(request,'booktest/index.html',context)
 
-
-
-
-
-
 #  列表显示书籍
 def list(request):
     # # 查所有书籍

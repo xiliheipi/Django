@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>展示详情结果页</title>
+    <link rel="stylesheet" href="/static/css/main.css">
+</head>
+<body>
+
+    <div class = 'container'>
+        <h2>展示详情结果页</h2>
+        {% if name %}
+        {% for i in name %}
+            <p>{{i.name}}--{{i.poll}}票</p>
+        {% empty %}
+            没有
+        {% endfor %}
+        {% else %}
+          没有
+        {% endif %}
+
+
+
+
+    </div>
+    <a href="{% url 'votetest:index' %}">返回主页</a>
+    <br>
+
+
+</body>
+</html>

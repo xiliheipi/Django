@@ -37,7 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'booktest'
+    'booktest',
+    'votetest',
 ]
 # 中间件  django 拥有自带功能
 MIDDLEWARE = [
