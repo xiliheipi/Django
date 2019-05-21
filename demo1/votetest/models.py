@@ -22,3 +22,16 @@ class Option(models.Model):
 
     def __str__(self):
         return ('%s,%s,%s')%(self.name,self.poll,self.headline)
+
+
+# 注册用户表
+class User(models.Model):
+    name = models.CharField(max_length=30,verbose_name='用户姓名')
+    pwd = models.CharField(max_length=30,verbose_name='用户密码')
+
+    def __str__(self):
+        return ('%s,%s')%(self.name,self.pwd)
+
+
+
+

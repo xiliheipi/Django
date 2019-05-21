@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,19 +14,23 @@
         {% if headline %}
         <form action="{% url 'votetest:list' headline.id %}" method="post">
             <h2>选项列表页</h2>
-
-    <br>
-
-        <ul>
+            <br>
+            <p>{{headline.title}}</p>
+        <ol>
             {% for head in headline.option_set.all %}
-            <li><input type="radio" name = 'button' value='{{head.id}}'>{{ head.name }}</li>
-
+                    {% if forloop.first %}
+            <li><input checked type="radio" name = 'button' value='{{head.id}}'>{{ head.name }}</li>
+                    {% else %}
+                        <li><input type="radio" name = 'button' value='{{head.id}}'>{{ head.name }}</li>
+                    {% endif %}
             {% empty %}
+
+
 
             <li>没有选项</li>
             {% endfor %}
             <input type="submit" value="提交">
-        </ul>
+        </ol>
         {% else %}
         没有选项信息
         {% endif %}

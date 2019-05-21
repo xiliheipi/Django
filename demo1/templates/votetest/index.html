@@ -2,13 +2,16 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>就让投票开始吧！！！</title>
     <link rel="stylesheet" href="/static/css/main.css">
 </head>
 <body>
     <div class="container">
-        <h2>就让投票开始吧！！！</h2>
-        <ul>
+        <h2>就让投票开始吧！！！</h2><br>
+        <h3> 当前用户：{{ request.session.username }}</h3>
+        <br>
+        <a href="{% url 'votetest:logout' %}">退出账号</a>
+        <ol>
             {% if allHeadline %}
             {% for headline in allHeadline %}
             <li><a href="{% url 'votetest:list' headline.id%}">{{headline.title}}</a></li>
@@ -16,14 +19,11 @@
             没有投票信息
             {% endfor %}
 
-        </ul>
-        {% else %}
-        没有投票
-        {% endif %}
+        </ol>
+            {% else %}
+            没有投票
+            {% endif %}
     </div>
-
-
-
 
 
 
