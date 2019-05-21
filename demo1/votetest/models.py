@@ -1,5 +1,5 @@
 from django.db import models
-
+from django.contrib.auth.models import User
 # Create your models here.
 
 # 标题（也就是书）
@@ -23,14 +23,23 @@ class Option(models.Model):
     def __str__(self):
         return ('%s,%s,%s')%(self.name,self.poll,self.headline)
 
+# 自己写的以一种方法
+# # 注册用户表
+# class User(models.Model):
+#     name = models.CharField(max_length=30,verbose_name='用户姓名')
+#     pwd = models.CharField(max_length=30,verbose_name='用户密码')
+#
+#     def __str__(self):
+#         return ('%s,%s')%(self.name,self.pwd)
 
-# 注册用户表
-class User(models.Model):
-    name = models.CharField(max_length=30,verbose_name='用户姓名')
-    pwd = models.CharField(max_length=30,verbose_name='用户密码')
 
-    def __str__(self):
-        return ('%s,%s')%(self.name,self.pwd)
+class MyUser(User):
+    url = models.URLField(blank=True, null=True, default='http://www.baidu.com')
+    class Meta():
+        verbose_name = '用户'
+        verbose_name_plural = verbose_name
+
+
 
 
 
