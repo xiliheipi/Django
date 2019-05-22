@@ -20,6 +20,8 @@ def checklogin(fun):
     #         return redirect(reverse('votetest:login'))
     # return check
 
+
+    #第二种方法 Django自己的功能
     def check(request,*args):
         if request.user and request.user.is_authenticated:
             return fun(request,*args)

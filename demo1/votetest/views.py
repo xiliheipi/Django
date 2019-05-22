@@ -124,10 +124,13 @@ def register(request):
         return redirect(reverse('votetest:login'))
 
 
+# 更改密码
+def changepwd(request):
+    if request.method == "POST":
+        username = request.POST.get('')
 
-
-
-
+    else:
+        return render(request,'votetest/changepwd.html',{'error':'用户名或者密码错误'})
 
 
 
@@ -169,5 +172,9 @@ def detail(request,id):
     temp = loader.get_template('votetest/detail.html')
     result = temp.render({'name':name,'headline':headline})
     return HttpResponse(result)
+
+
+
+
 
 
