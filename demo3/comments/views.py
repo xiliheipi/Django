@@ -4,6 +4,9 @@ from django.views.generic import View
 from django.http import HttpResponse
 from .models import Comment
 from blog.models import Article
+from comments.forms import CommentForm
+
+
 # from .forms import CommentForm
 
 

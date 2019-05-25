@@ -16,9 +16,10 @@ urlpatterns=[
     # rss 订阅路由
     url(r'rss/$',feed.BlogFeed(),name = 'rss'),
 
-    url(r'contactus/$',views.contactus,name = 'contactus'),
+    url(r'^contactus/$',views.Contacts.as_view(),name='contactus'),
 
-
+    #轮播图 路由
+    url(r'addads/$',views.Ads.as_view(),name = 'addads'),
 
 
 ]

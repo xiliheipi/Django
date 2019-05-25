@@ -31,7 +31,7 @@
     {% endcomment %}
 
 
-
+    {{ error }}
     <div>
         <!-- Nav tabs -->
         <ul class="nav nav-tabs" role="tablist">
@@ -45,6 +45,7 @@
         <div class="tab-content">
             <div role="tabpanel" class="tab-pane active" id="login">
                 <form action="{% url 'votetest:login' %}" method="post">
+                    {% csrf_token %}
 
                     <div class="form-group">
                         <label for="login1">输入登录用户名</label>
@@ -56,10 +57,61 @@
                         <input type="password" class="form-control" id="login1_pwd" placeholder="输入登录密码" name='userpwd'>
                     </div>
 
+
+                    <div class="form-group">
+                        <label for="verify">输入验证码</label>
+                        <input type="text" class="form-control" id="verify" placeholder="输入验证码" name='verify'>
+                        <div>
+                            <img src="{% url 'votetest:verify' %}" alt="丢失">
+                            
+
+                        </div>
+                        
+                    </div>
+                    <div>
                     <button type="submit" class="btn btn-default">登录</button>
+
+                     <span id = 'convertdata' class="btn btn-success">测试</span>
+                        <div id = 'info' class = 'btn-success'>null</div>
+                        <div id = 'info2'>null</div>
+                    </div>
+
                 </form>
                 <a href="{% url 'votetest:changepwd' %}">忘记密码</a>
             </div>
+
+            <script>
+                $(function(){
+                    $('#convertdata').click(function(){
+                              <!--console.log($('#login1').val())-->
+                              $.ajax({
+                              url:'/votetest/checkuser/',
+                              type:'post',
+                              data:{'username':$('#login1').val(),
+
+                              'csrfmiddlewaretoken':'{{ csrf_token }}'
+                              },
+                              success:function(data){
+                                if(data.issuccess){
+                                console.log('存在')
+                                }else{
+
+                                console.log('不存在')
+                                }
+
+                              }
+
+
+                              })
+                    })
+                })
+
+
+
+
+
+
+            </script>
 
 
 
@@ -78,6 +130,12 @@
                         <label for="register_pwd">输入注册密码</label>
                         <input type="password" name="password_regi"  class="form-control" id="register_pwd" placeholder="输入注册密码">
                     </div>
+
+                    <div class="form-group">
+                        <label for="email">输入邮箱</label>
+                        <input type="text" name="email"  class="form-control" id="email" placeholder="输入邮箱">
+                    </div>
+
 
                     <button type="submit" class="btn btn-default">注册</button>
                 </form>

@@ -1,5 +1,5 @@
 from django import template
-from ..models import Article,Category,Tag
+from ..models import Article,Category,Tag,Ads
 
 
 
@@ -54,6 +54,13 @@ def getarchives(num = 3):
 @register.simple_tag
 def gettags():
     return Tag.objects.all()
+
+
+# 轮播图
+@register.simple_tag
+def getads():
+    return Ads.objects.all()
+
 
 
 
