@@ -153,6 +153,12 @@ DEFAULT_FROM_EMAIL = 'zzy0371 <18137128152@163.com>'
 MEDIA_ROOT = os.path.join(BASE_DIR,'static/media')
 
 
-
-
+# 使用Redis缓存
+CACHES = {
+"default": {
+"BACKEND": "redis_cache.cache.RedisCache",
+"LOCATION": "localhost:6379",
+'TIMEOUT': 60,
+},
+}
 
