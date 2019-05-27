@@ -1,0 +1,17 @@
+{{ object.title }}
+{{ object.body }}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

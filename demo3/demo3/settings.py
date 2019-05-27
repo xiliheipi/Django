@@ -42,6 +42,7 @@ INSTALLED_APPS = [
 
     # 需要使用第三方的静态资源 必须注册应用
     'tinymce',
+    'haystack',
 
 
 
@@ -162,3 +163,16 @@ CACHES = {
 },
 }
 
+# 配置hasystack使用whoosh引擎
+
+HAYSTACK_CONNECTIONS = {
+'default': {
+'ENGINE': 'blog.whoosh_cn_backend.WhooshEngine',
+'PATH': os.path.join(BASE_DIR, 'whoosh_index'),
+}
+}
+
+# 每页显示10个结果
+HAYSTACK_SEARCH_RESULTS_PER_PAGE = 10
+# 索引实时更新
+HAYSTACK_SIGNAL_PROCESSOR = 'haystack.signals.RealtimeSignalProcessor'

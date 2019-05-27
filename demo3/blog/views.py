@@ -122,3 +122,11 @@ class Ads(View):
         ad = adsModel( img = img ,desc = desc)
         ad.save()
         return redirect(reverse('blog:index'))
+
+
+
+
+
+
+
+
