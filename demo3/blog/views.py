@@ -61,6 +61,8 @@ def detail(request, id):
     return render(request, 'single.html', locals())
 
 
+
+#  归档  显示年份和月份
 def archives(request, year, month):
     # 属性__比较类型 =
     articles = Article.objects.filter(create_time__year=year, create_time__month=month)

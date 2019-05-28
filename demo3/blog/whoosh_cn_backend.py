@@ -24,13 +24,6 @@ from haystack.utils import log as logging
 from haystack.utils import get_identifier, get_model_ct
 from haystack.utils.app_loading import haystack_get_model
 from jieba.analyse import ChineseAnalyzer
-
-
-
-
-
-
-
 try:
     import whoosh
 except ImportError:
@@ -167,7 +160,6 @@ class WhooshSearchBackend(BaseSearchBackend):
             elif field_class.field_type == 'edge_ngram':
                 schema_fields[field_class.index_fieldname] = NGRAMWORDS(minsize=2, maxsize=15, at='start', stored=field_class.stored, field_boost=field_class.boost)
             else:
-                # 更改中文
                 schema_fields[field_class.index_fieldname] = TEXT(stored=True, analyzer=ChineseAnalyzer(), field_boost=field_class.boost, sortable=True)
 
             if field_class.document is True:
