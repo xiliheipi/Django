@@ -127,3 +127,10 @@ STATIC_URL = '/static/'
 
 # 配置样式文件夹
 STATICFILES_DIRS = [os.path.join(BASE_DIR,'static')]
+
+#图片
+MEDIA_ROOT = os.path.join(BASE_DIR,'static/media')
+
+
+
+

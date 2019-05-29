@@ -2,7 +2,16 @@ from django.db import models
 from django.contrib.auth.models import User
 # Create your models here.
 
+# 图片显示轮播图
+class Ads(models.Model):
+    img = models.ImageField(upload_to='ads',verbose_name='广告图')
+    desc = models.CharField(max_length=20,verbose_name='广告描述')
+    def __str__(self):
+        return self.desc
 
+    class Meta():
+        verbose_name = '轮播图'
+        verbose_name_plural = verbose_name
 
 
 # 标签   （坦克，物理输出，法术输出，控制）
@@ -42,6 +51,7 @@ class HeroIntro(models.Model):
     # 英雄位置类型
     postion = models.ManyToManyField(Postion)
     author = models.ForeignKey(User,models.CASCADE)
+    ads = models.ForeignKey(Ads, on_delete=models.CASCADE)
 
     def __str__(self):
         return self.title
@@ -49,3 +59,18 @@ class HeroIntro(models.Model):
     class Meta():
         verbose_name = '英雄简介'
         verbose_name_plural = verbose_name
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

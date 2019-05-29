@@ -6,3 +6,4 @@ from .models import *
 admin.site.register(HeroIntro)
 admin.site.register(Postion)
 admin.site.register(Category)
+admin.site.register(Ads)

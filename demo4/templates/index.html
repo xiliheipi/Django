@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -24,6 +25,7 @@
 
 </head>
 <body>
+{% load extend_fun %}
 <!-- Header -->
 <div class="header">
     <!-- Navbar -->
@@ -89,35 +91,26 @@
 <!-- //Banner-Slider-JavaScript -->
 <!-- //Header -->
 
-<!-- trend -->
+<!-- trend 英雄轮播图-->
 <div class="trend-w3layouts">
     <div class="container">
-        <h2>Trending Games</h2>
+
+        {% getheros as heros %}
+        <h2>英雄列表</h2>
         <ul id="flexiselDemo1">
-            <li>
+            {% for hero in heros %}
+
+                <li>
                 <div class="trend-grid">
-                    <h4>Racing Games</h4>
-                    <img src="/static/images/tg1.jpg" alt=" " class="img-responsive"/>
+                    <h4>{{ hero.ads.desc }}</h4>
+
+                    {% if hero.id %}
+                     <a href="{% url 'gametest:single' hero.id %}"><img src="/static/media/{{ hero.ads.img }}" alt="丢失"></a>
+                    {% endif %}
                 </div>
-            </li>
-            <li>
-                <div class="trend-grid">
-                    <h4>3D Games</h4>
-                    <img src="/static/images/tg2.jpg" alt=" " class="img-responsive"/>
-                </div>
-            </li>
-            <li>
-                <div class="trend-grid">
-                    <h4>Action Games</h4>
-                    <img src="/static/images/tg3.jpg" alt=" " class="img-responsive"/>
-                </div>
-            </li>
-            <li>
-                <div class="trend-grid">
-                    <h4>Toy Games</h4>
-                    <img src="/static/images/tg4.jpg" alt=" " class="img-responsive"/>
-                </div>
-            </li>
+                </li>
+
+            {% endfor %}
         </ul>
         <script type="text/javascript">
 							$(window).load(function() {
