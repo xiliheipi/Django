@@ -32,7 +32,7 @@
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
 					</button>
-					<a  href="index.html"><h1>Games <img src="/static/images/c1.png" alt=" " /> Zone</h1></a>
+					<a  href="index.html"><h1>还没<img src="/static/images/c1.png" alt=" " />做完</h1></a>
 				</div>
 
 				<div id="navbar" class="navbar-collapse collapse">
@@ -40,7 +40,7 @@
 						<li class="hover-effect"><a href="{% url 'gametest:index' %}">Home</a></li>
                     <li class="hover-effect"><a href="{% url 'gametest:about' %}">About</a></li>
                     <li class="hover-effect active"><a href="{% url 'gametest:games' %}">Games</a></li>
-                    <li class="hover-effect"><a href="{% url 'gametest:news' %}">News</a></li>
+                   <li class="hover-effect"><a href="{% url 'gametest:detail' %}">Detail</a></li>
                     <li class="hover-effect"><a href="{% url 'gametest:contact' %}">Contact</a></li>
 
 					</ul>
@@ -54,11 +54,11 @@
 <!-- gallery -->
 	<div class="gallery-w3layouts" id="gallery">
 		<div class="container">
-			<h2>Exclusive Games</h2>			
+			<h2>其他游戏</h2>
 			<div class="gallery-grids">
 				<div class="gallery-grid">
 					<a class="book popup-with-zoom-anim button-isi zoomIn animated" data-wow-delay=".5s" href="#small-dialog">
-						<img src="/static/images/g1.jpg" alt=" " class="img-responsive zoom-img" />
+						<img src="/static/images/街头篮球.jpg" alt=" " class="img-responsive zoom-img" />
 					</a>
 					<a class="book popup-with-zoom-anim button-isi zoomIn animated" data-wow-delay=".5s" href="#small-dialog2">
 						<img src="/static/images/g2.jpg" alt=" " class="img-responsive zoom-img" />
@@ -355,60 +355,60 @@
 <div class="footer">
 	<div class="container">
 		<div class="col-md-3 footer-left-w3">
-			<h4>Contact</h4>
+			<h4>联系</h4>
 			<ul>
 				<li><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span></li>
-				<li><a href="mailto:example@mail.com"><h6>ex@mail.com</h6></a></li>
+				<li><a href="mailto:example@mail.com"><h6>826918436@qq.com</h6></a></li>
 			</ul>
 			<ul>
 				<li><span class="glyphicon glyphicon-earphone" aria-hidden="true"></span></li>
-				<li><h6>+18045678834</h6></li>
+				<li><h6>18903849270</h6></li>
 			</ul>
 			<ul>
 				<li><span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span></li>
-				<li><h6>4th Avenue,London</h6></li>
+				<li><h6>郑州金水西路月季花园</h6></li>
 			</ul>
 			<ul>
 				<li><span class="glyphicon glyphicon-phone-alt" aria-hidden="true"></span></li>
-				<li><h6>(0033)6544 5453 644</h6></li>
+				<li><h6>400 820 820 820</h6></li>
 			</ul>
 		</div>
 		<div class="col-md-5 footer-middle-w3">
-			<h4>Latest Games</h4>
+			<h4>猜你喜欢</h4>
 			<div class="col-md-3 img-w3-agile">
-				<a href="single.html"><img src="/static/images/ng1.jpg" alt=" " /></a>
-			</div>
-			<div class="col-md-3 img-w3-agile">
-				<a href="single.html"><img src="/static/images/ng2.jpg" alt=" " /></a>
+				<a href="{% url 'gametest:single' 7 %}"><img src="/static/images/锤石.jpg" alt=" " /></a>
 			</div>
 			<div class="col-md-3 img-w3-agile">
-				<a href="single.html"><img src="/static/images/ng3.jpg" alt=" " /></a>
+				<a href="{% url 'gametest:single' 2 %}"><img src="/static/images/诺手.jpg" alt=" " /></a>
 			</div>
 			<div class="col-md-3 img-w3-agile">
-				<a href="single.html"><img src="/static/images/ng4.jpg" alt=" " /></a>
+				<a href="{% url 'gametest:single' 4 %}"><img src="/static/images/金克斯.jpg" alt=" " /></a>
+			</div>
+			<div class="col-md-3 img-w3-agile">
+				<a href="{% url 'gametest:single' 3 %}"><img src="/static/images/盲僧.jpg" alt=" " /></a>
 			</div>
 			<div class="col-md-3 img-w3-agile footer-middle-wthree">
-				<a href="single.html"><img src="/static/images/ng5.jpg" alt=" " /></a>
+				<a href="{% url 'gametest:single' 12 %}"><img src="/static/images/科加斯.jpg" alt=" " /></a>
 			</div>
 			<div class="col-md-3 img-w3-agile footer-middle-wthree">
-				<a href="single.html"><img src="/static/images/ng6.jpg" alt=" " /></a>
+				<a href="{% url 'gametest:single' 9 %}"><img src="/static/images/狐狸.jpg" alt=" " /></a>
 			</div>
 			<div class="col-md-3 img-w3-agile footer-middle-wthree">
-				<a href="single.html"><img src="/static/images/ng7.jpg" alt=" " /></a>
+				<a href="{% url 'gametest:single' 10 %}"><img src="/static/images/剑圣.jpg" alt=" " /></a>
 			</div>
 			<div class="col-md-3 img-w3-agile footer-middle-wthree">
-				<a href="single.html"><img src="/static/images/ng8.jpg" alt=" " /></a>
+				<a href="{% url 'gametest:single' 8 %}"><img src="/static/images/盖伦.jpg" alt=" " /></a>
 			</div>
 			<div class="clearfix"></div>
 		</div>
 		<div class="col-md-4 footer-right-w3">
-			<a href="index.html"><h4>Games <img src="/static/images/f1.png" alt=" " /> Zone</h4></a>
-			<p>Donec lobortis diam eu auctor porta. Phasellus in elementum tortor, sit amet imperdiet urna pellentesque non risus porta.</p>
-			<p class="agileinfo">Suspendisse convallis malesuada libero, non rutrum arcu pellentesque lacinia.</p>
+			<a href="index.html"><h4>英雄 <img src="/static/images/f1.png" alt=" " /> 介绍</h4></a>
+			<p>还喜欢本网站么？不喜欢也得喜欢！赶紧收藏加设为主页！</p>
+			<p class="agileinfo">什么？你说很辣鸡？我心里当然有数!还用你说啊！</p>
 		</div>
 		<div class="clearfix"></div>
 		<div class="copyright">
-			<p>Copyright &copy; 2017.Company name All rights reserved.More Templates <a href="http://www.cssmoban.com/" target="_blank" title="模板之家">模板之家</a> - Collect from <a href="http://www.cssmoban.com/" title="网页模板" target="_blank">网页模板</a></p>
+			<p>Copyright &copy; 2017.Company name LOL home. <a href="https://lol.qq.com/" target="_blank" title="英雄联盟之家">英雄联盟之家</a> - Collect from <a href="https://lol.qq.com/" title="网页模板" target="_blank">英雄联盟</a></p>
 		</div>
 	</div>
 </div>

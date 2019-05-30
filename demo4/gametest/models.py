@@ -61,15 +61,21 @@ class HeroIntro(models.Model):
         verbose_name_plural = verbose_name
 
 
+# 网友建议
+class MessageInfo(models.Model):
+    username = models.CharField(max_length=20)
+    email = models.EmailField(blank=True,null=True)
+    phone = models.IntegerField(max_length=20)
+    city = models.CharField(max_length=20)
 
+    subject = models.CharField(max_length=50)
 
+    def __str__(self):
+        return self.username
 
-
-
-
-
-
-
+    class Meta():
+        verbose_name = '网友建议'
+        verbose_name_plural = verbose_name
 
 
 

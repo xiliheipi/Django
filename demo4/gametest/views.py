@@ -1,6 +1,9 @@
 from django.shortcuts import render
-from django.shortcuts import HttpResponse,HttpResponseRedirect,get_object_or_404
+from django.shortcuts import HttpResponse,HttpResponseRedirect,get_object_or_404,reverse
 from .models import *
+from django.views.generic import View
+from django.core.mail import send_mass_mail,send_mail
+from django.conf import settings
 # 分页器
 from django.core.paginator import Paginator
 
@@ -24,9 +27,28 @@ def News(request):
 
 
 
+class Contact(View):
+    def get(self,request):
+        return render(request, 'contact.html')
 
-def Contact(request):
-    return render(request, 'contact.html')
+    def post(self,request):
+        m = MessageInfo()
+        username = request.POST.get('username')
+        email = request.POST.get('email')
+        phone = request.POST.get('phone')
+        city = request.POST.get('city')
+        subject = request.POST.get('subject')
+        send_mail('建议', subject, settings.DEFAULT_FROM_EMAIL, ['826918436@qq.com'])
+
+        m.username = username
+        m.email = email
+        m.phone = phone
+        m.city = city
+        m.subject = subject
+        m.save()
+
+        return render(request, 'contact.html')
+
 
 
 
@@ -54,16 +76,26 @@ def Single(request,id):
         hero = get_object_or_404(HeroIntro, pk=id)
         hero.views += 1
         hero.save()
+
+        for cate in hero.category.all():
+            print(cate,type(cate.title))
         return render(request, 'single.html', locals())
 
 
+# 英雄分类
+def Cate(request,id):
+    cate = get_object_or_404(Category,pk = id)
+
+    catehero = cate.herointro_set.all()
+
+    return render(request, 'category.html', locals())
 
 
 
 
+def Detail(request):
 
-
-
+    return render(request,'detail.html')
 
 
 

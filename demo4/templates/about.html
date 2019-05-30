@@ -31,15 +31,16 @@
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
 					</button>
-					<a  href="index.html"><h1>Games <img src="/static/images/c1.png" alt=" " /> Zone</h1></a>
+					<a  href="index.html"><h1>没写完<img src="/static/images/c1.png" alt=" " />见谅</h1></a>
 				</div>
+
 
 				<div id="navbar" class="navbar-collapse collapse">
 					<ul class="nav navbar-nav navbar-right">
 						<li class="hover-effect"><a href="{% url 'gametest:index' %}">Home</a></li>
                     <li class="hover-effect active"><a href="{% url 'gametest:about' %}">About</a></li>
                     <li class="hover-effect"><a href="{% url 'gametest:games' %}">Games</a></li>
-                    <li class="hover-effect"><a href="{% url 'gametest:news' %}">News</a></li>
+                    <li class="hover-effect"><a href="{% url 'gametest:detail' %}">Detail</a></li>
                     <li class="hover-effect"><a href="{% url 'gametest:contact' %}">Contact</a></li>
 					</ul>
 				</div>
@@ -52,22 +53,22 @@
 <!-- about-->
 	<div class="about-agileinfo" id="about">
 		<div class="container">
-			<h2>About Us</h2>
+			<h2>关于我们</h2>
 			<div class="about-grids-w3-agileits">
 				<div class="col-md-6 about-grid-left-agileits-w3layouts">
 					<ul>
-						<li><i>1.</i><a class="link link--kumya" href="single.html"><span data-letters="Qui ratione voluptatem dolores eos qui">Qui ratione voluptatem dolores</span></a></li>
-						<li><i>2.</i><a class="link link--kumya" href="single.html"><span data-letters="Dolores eos qui ratione voluptatem sequi">Dolores eos qui ratione volu</span></a></li>
-						<li><i>3.</i><a class="link link--kumya" href="single.html"><span data-letters="Voluptatem quia voluptas sit asper">Voluptatem quia voluptas sit asper</span></a></li>
-						<li><i>4.</i><a class="link link--kumya" href="single.html"><span data-letters="Consectetur adipiscing elit, incid">Consectetur adipiscing elit, incid</span></a></li>
-						<li><i>5.</i><a class="link link--kumya" href="single.html"><span data-letters="Quia voluptas sit aspernatur aut odit">Quia voluptas sit aspernatur aut</span></a></li>
-						<li><i>6.</i><a class="link link--kumya" href="single.html"><span data-letters="Eos qui ratione voluptatem sequi">Eos qui ratione voluptatem sequi</span></a></li>
+						<li><i>1.</i><a class="link link--kumya" href="{% url 'gametest:cate' 1 %}"><span data-letters="喜欢刺客，就是秒人类型的英雄？">喜欢刺客，就是秒人类型的英雄</span></a></li>
+						<li><i>2.</i><a class="link link--kumya" href="{% url 'gametest:cate' 2 %}"><span data-letters="什么？你喜欢站着跟人对A？？？？">什么？你喜欢站着跟人对A？？？？</span></a></li>
+						<li><i>3.</i><a class="link link--kumya" href="{% url 'gametest:cate' 3 %}"><span data-letters="你竟然别人疯狂打你，吸引火力，你好MAN哦~~">你竟然别人疯狂打你，吸引火力，你好MAN哦~~</span></a></li>
+						<li><i>4.</i><a class="link link--kumya" href="{% url 'gametest:cate' 4 %}"><span data-letters="喜欢猥琐发育？后期疯狂输出？？？">喜欢猥琐发育？后期疯狂输出？？？</span></a></li>
+						<li><i>5.</i><a class="link link--kumya" href="{% url 'gametest:cate' 5 %}"><span data-letters="哟，喜欢用魔法攻击别人啊？不愧是你！">哟，喜欢用魔法攻击别人啊？不愧是你！</span></a></li>
+						<li><i>6.</i><a class="link link--kumya" href="{% url 'gametest:cate' 6 %}"><span data-letters="你喜欢疯狂控制别人的行动？让别人难受？666！">你喜欢疯狂控制别人的行动？让别人难受？666！</span></a></li>
 					</ul>
 				</div>
 				<div class="col-md-6 about-grid-right-w3-agile">
 					<div class="grid-w3ls">
 					<figure class="effect-zoe">
-						<img src="/static/images/about.jpg" alt=" " class="img-responsive" />
+						<img src="/static/images/伊泽瑞尔.jpg" alt=" " class="img-responsive" />
 						<figcaption>
 							<h3>Games<span>Zone</span></h3>
 							<p class="icon-links">
@@ -128,11 +129,11 @@
 <!-- team -->
 	<div class="team-w3layouts">
 		<div class="container">
-			<h3>Our Team</h3>
+			<h3>我们的团队</h3>
 			<div class="w3l_team_grids-agile">
 				<div class="col-md-3 w3l_team_grid">
 					<div class="view view-second">
-						<img src="/static/images/t1.jpg" alt=" " class="img-responsive" />
+						<img src="/static/images/邢帅.jpg" alt=" " class="img-responsive" />
 						<div class="mask"></div>
 						<div class="content">
 							<div class="w3l_social_icons w3l_social_icons1">
@@ -143,15 +144,15 @@
 									<li><a href="#" class="facebook"></a></li>
 								</ul>
 							</div>
-							<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.</p>
+							<p>主要作者：阿帅用时三天，自己动手做的作品，很垃圾，有待提高</p>
 						</div>
 					</div>
-					<h4>Mariya Thomas</h4>
-					<p>Games Designer</p>
+					<h4>邢帅</h4>
+					<p>主要作者</p>
 				</div>
 				<div class="col-md-3 w3l_team_grid">
 					<div class="view view-second">
-						<img src="/static/images/t2.jpg" alt=" " class="img-responsive" />
+						<img src="/static/images/陈冠希.jpg" alt=" " class="img-responsive" />
 						<div class="mask"></div>
 						<div class="content">
 							<div class="w3l_social_icons w3l_social_icons1">
@@ -162,15 +163,15 @@
 									<li><a href="#" class="facebook"></a></li>
 								</ul>
 							</div>
-							<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.</p>
+							<p>冠希哥是一位香港艺人，也是潮流的最前线，及帅气阳光时尚暴躁与一身的性格明显！</p>
 						</div>
 					</div>
-					<h4>Dino Jass</h4>
-					<p>Games Designer</p>
+					<h4>冠希哥</h4>
+					<p>颜值担当</p>
 				</div>
 				<div class="col-md-3 w3l_team_grid">
 					<div class="view view-second">
-						<img src="/static/images/t3.jpg" alt=" " class="img-responsive" />
+						<img src="/static/images/赫本.jpg" alt=" " class="img-responsive" />
 						<div class="mask"></div>
 						<div class="content">
 							<div class="w3l_social_icons w3l_social_icons1">
@@ -181,15 +182,15 @@
 									<li><a href="#" class="facebook"></a></li>
 								</ul>
 							</div>
-							<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.</p>
+							<p>想必不用多介绍了吧，赫本跟纪梵希的故事~~~~</p>
 						</div>
 					</div>
-					<h4>Michael Doe</h4>
-					<p>Games Designer</p>
+					<h4>奥黛丽·赫本</h4>
+					<p>女神</p>
 				</div>
 				<div class="col-md-3 w3l_team_grid">
 					<div class="view view-second">
-						<img src="/static/images/t4.jpg" alt=" " class="img-responsive" />
+						<img src="/static/images/giao哥.jpg" alt=" " class="img-responsive" />
 						<div class="mask"></div>
 						<div class="content">
 							<div class="w3l_social_icons w3l_social_icons1">
@@ -200,11 +201,11 @@
 									<li><a href="#" class="facebook"></a></li>
 								</ul>
 							</div>
-							<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.</p>
+							<p>giao哥风骚依旧</p>
 						</div>
 					</div>
-					<h4>Rita James</h4>
-					<p>Games Designer</p>
+					<h4>搞笑担当</h4>
+					<p>Giao哥</p>
 				</div>
 				<div class="clearfix"> </div>
 			</div>
@@ -217,60 +218,60 @@
 <div class="footer">
 	<div class="container">
 		<div class="col-md-3 footer-left-w3">
-			<h4>Contact</h4>
+			<h4>联系</h4>
 			<ul>
 				<li><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span></li>
-				<li><a href="mailto:example@mail.com"><h6>ex@mail.com</h6></a></li>
+				<li><a href="mailto:example@mail.com"><h6>826918436@qq.com</h6></a></li>
 			</ul>
 			<ul>
 				<li><span class="glyphicon glyphicon-earphone" aria-hidden="true"></span></li>
-				<li><h6>+18045678834</h6></li>
+				<li><h6>18903849270</h6></li>
 			</ul>
 			<ul>
 				<li><span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span></li>
-				<li><h6>4th Avenue,London</h6></li>
+				<li><h6>郑州金水西路月季花园</h6></li>
 			</ul>
 			<ul>
 				<li><span class="glyphicon glyphicon-phone-alt" aria-hidden="true"></span></li>
-				<li><h6>(0033)6544 5453 644</h6></li>
+				<li><h6>400 820 820 820</h6></li>
 			</ul>
 		</div>
 		<div class="col-md-5 footer-middle-w3">
-			<h4>Latest Games</h4>
+			<h4>猜你喜欢</h4>
 			<div class="col-md-3 img-w3-agile">
-				<a href="single.html"><img src="/static/images/ng1.jpg" alt=" " /></a>
-			</div>
-			<div class="col-md-3 img-w3-agile">
-				<a href="single.html"><img src="/static/images/ng2.jpg" alt=" " /></a>
+				<a href="{% url 'gametest:single' 7 %}"><img src="/static/images/锤石.jpg" alt=" " /></a>
 			</div>
 			<div class="col-md-3 img-w3-agile">
-				<a href="single.html"><img src="/static/images/ng3.jpg" alt=" " /></a>
+				<a href="{% url 'gametest:single' 2 %}"><img src="/static/images/诺手.jpg" alt=" " /></a>
 			</div>
 			<div class="col-md-3 img-w3-agile">
-				<a href="single.html"><img src="/static/images/ng4.jpg" alt=" " /></a>
+				<a href="{% url 'gametest:single' 4 %}"><img src="/static/images/金克斯.jpg" alt=" " /></a>
+			</div>
+			<div class="col-md-3 img-w3-agile">
+				<a href="{% url 'gametest:single' 3 %}"><img src="/static/images/盲僧.jpg" alt=" " /></a>
 			</div>
 			<div class="col-md-3 img-w3-agile footer-middle-wthree">
-				<a href="single.html"><img src="/static/images/ng5.jpg" alt=" " /></a>
+				<a href="{% url 'gametest:single' 12 %}"><img src="/static/images/科加斯.jpg" alt=" " /></a>
 			</div>
 			<div class="col-md-3 img-w3-agile footer-middle-wthree">
-				<a href="single.html"><img src="/static/images/ng6.jpg" alt=" " /></a>
+				<a href="{% url 'gametest:single' 9 %}"><img src="/static/images/狐狸.jpg" alt=" " /></a>
 			</div>
 			<div class="col-md-3 img-w3-agile footer-middle-wthree">
-				<a href="single.html"><img src="/static/images/ng7.jpg" alt=" " /></a>
+				<a href="{% url 'gametest:single' 10 %}"><img src="/static/images/剑圣.jpg" alt=" " /></a>
 			</div>
 			<div class="col-md-3 img-w3-agile footer-middle-wthree">
-				<a href="single.html"><img src="/static/images/ng8.jpg" alt=" " /></a>
+				<a href="{% url 'gametest:single' 8 %}"><img src="/static/images/盖伦.jpg" alt=" " /></a>
 			</div>
 			<div class="clearfix"></div>
 		</div>
 		<div class="col-md-4 footer-right-w3">
-			<a href="index.html"><h4>Games <img src="/static/images/f1.png" alt=" " /> Zone</h4></a>
-			<p>Donec lobortis diam eu auctor porta. Phasellus in elementum tortor, sit amet imperdiet urna pellentesque non risus porta.</p>
-			<p class="agileinfo">Suspendisse convallis malesuada libero, non rutrum arcu pellentesque lacinia.</p>
+			<a href="index.html"><h4>英雄 <img src="/static/images/f1.png" alt=" " /> 介绍</h4></a>
+			<p>还喜欢本网站么？不喜欢也得喜欢！赶紧收藏加设为主页！</p>
+			<p class="agileinfo">什么？你说很辣鸡？我心里当然有数!还用你说啊！</p>
 		</div>
 		<div class="clearfix"></div>
 		<div class="copyright">
-			<p>Copyright &copy; 2017.Company name All rights reserved.More Templates <a href="http://www.cssmoban.com/" target="_blank" title="模板之家">模板之家</a> - Collect from <a href="http://www.cssmoban.com/" title="网页模板" target="_blank">网页模板</a></p>
+			<p>Copyright &copy; 2017.Company name LOL home. <a href="https://lol.qq.com/" target="_blank" title="英雄联盟之家">英雄联盟之家</a> - Collect from <a href="https://lol.qq.com/" title="网页模板" target="_blank">英雄联盟</a></p>
 		</div>
 	</div>
 </div>

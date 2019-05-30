@@ -78,56 +78,35 @@
 			<div class="col-md-7 wthree_blog_left">
 				<div class="wthree_blog_left_grid">
 					<div class="wthree_blog_left_grid_slider">
-						<img src="/static/media/{{ hero.ads.img }}" alt=" " class="img-responsive" />
+						<img src="/static/images/lol.jpg" alt=" " class="img-responsive" />
 					</div>
-					<h4>{{ hero }}</h4>
-					{% if hero.postion.all %}
-						{% for hp in hero.postion.all %}
 
-						<span>{{ hp }}</span>
-						{% endfor %}
+					<h3>同类英雄</h3>
+					{% if catehero %}
+						{% for hero in catehero %}
+
+						<h4><a href="{% url 'gametest:single' hero.id %}">{{ hero }}</a></h4>
 					<ul>
-						<li><span class="glyphicon glyphicon-user" aria-hidden="true"></span><a href="#">{{ hero.author }}</a><i>|</i></li>
-						<li><span class="glyphicon glyphicon-heart" aria-hidden="true"></span><a href="#">{{ hero.views }} 阅读</a><i>|</i></li>
-						<li><span class="glyphicon glyphicon-tag" aria-hidden="true"></span>创建时间：{{ hero.create_time }}<i></i></li>
+						<li><span class="glyphicon glyphicon-user" aria-hidden="true"></span>{{ hero.author }}<i>|</i></li>
+						<li><span class="glyphicon glyphicon-heart" aria-hidden="true"></span>{{ hero.views }} 阅读<i>|</i></li>
+						<li><span class="glyphicon glyphicon-tag" aria-hidden="true"></span>{{ hero.create_time }}<i></i></li>
 
+						<p>{{ hero.body|truncatechars:10 }}....</p>
 					</ul>
+						{% endfor %}
+
 					{% endif %}
-					<p>{{ hero.body }}</p>
+
 				</div>
 
 
-
-				<div>
-					<a href="{% url 'gametest:single' hero.id|add:-1 %}">上一页</a>
-					<span>{{ hero.id }}</span>
-					<a href="{% url 'gametest:single' hero.id|add:1 %}">下一页</a>
+				<div class="agileits_share">
 				</div>
-
-
 
 
 				<div class="agileits_reply">
-					<h3>留下评论吧</h3>
-					<form action="{% url 'comments:addcomment' hero.id %}" method="post">
-						{% csrf_token %}
-						<input type="text" name="Name" placeholder="Name" required="">
-						<input type="email" name="Email" placeholder="Email" required="">
-						<input type="text" name="Subject" placeholder="Subject" required="">
-						<textarea name="Message" placeholder="Type your comment..." required=""></textarea>
-						<input type="submit" value="Submit">
-					</form>
-					<br>
-				</div>
 
-				<!--显示评论-->
-				<h1>评论</h1>
-					<br>
-					{% if hero.comment_set %}
-								{% for comment in hero.comment_set.all %}
-								<h2>{{ comment.username }}:  {{ comment.content }}</h2>
-								{% endfor %}
-					{% endif %}
+				</div>
 				</div>
 
 
@@ -141,56 +120,6 @@
 					</form>
 				</div>
 
-
-
-				<div class="w3l_categories">
-					<h3>类型</h3>
-					<ul>
-					{% if hero.category.all %}
-						{% for cate in hero.category.all %}
-						<li><a href="{% url 'gametest:cate' cate.id %}">{{ cate.title }}</a></li>
-
-						{% endfor %}
-					{% endif %}
-
-					</ul>
-				</div>
-
-
-
-					<div class="w3l_archives">
-					<h3>类似英雄</h3>
-					<ul>
-						{% if cate %}
-							{% for catehero in cate.herointro_set.all %}
-							<li><a href="{% url 'gametest:single' catehero.id %}">{{ catehero }}: {{ catehero.body|truncatechars:14 }}......</a></li>
-							{% empty %}
-							没有对象
-							{% endfor %}
-						{% else %}
-						<li>暂无类似英雄</li>
-						{% endif %}
-					</ul>
-					</div>
-
-
-					<div class="w3l_archives">
-						<h3>点击最多</h3>
-						<ul>
-						{% getlateheros as lateheros %}
-							{% if lateheros %}
-									{% for hero in lateheros %}
-
-							<li><a href="{% url 'gametest:single' hero.id %}">{{ hero.title }}</a></li>
-									{% endfor %}
-
-							{% else %}
-
-							{% endif %}
-
-						</ul>
-
-						</div>
 
 
 
@@ -216,13 +145,11 @@
 
 
 
-
-
 			</div>
 			<div class="clearfix"> </div>
 		</div>
 	</div>
-<!-- //single -->	
+<!-- //single -->
 
 <!-- footer -->
 <div class="footer">

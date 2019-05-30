@@ -48,7 +48,7 @@
                     <li class="hover-effect"><a href="{% url 'gametest:index' %}">Home</a></li>
                     <li class="hover-effect"><a href="{% url 'gametest:about' %}">About</a></li>
                     <li class="hover-effect"><a href="{% url 'gametest:games' %}">Games</a></li>
-                    <li class="hover-effect"><a href="{% url 'gametest:news' %}">News</a></li>
+                    <li class="hover-effect"><a href="{% url 'gametest:detail' %}">Detail</a></li>
                     <li class="hover-effect"><a href="{% url 'gametest:contact' %}">Contact</a></li>
                 </ul>
             </div>
@@ -149,34 +149,30 @@
 <!-- services-->
 <div class="services-agileits-w3layouts">
     <div class="container">
-        <h3>Services</h3>
+        <h3>想了解更多？</h3>
         <div class="col-md-3 service-grid-agileits service-grid-agileits-top">
             <span class="glyphicon glyphicon-sort-by-attributes" aria-hidden="true"></span>
-            <h4>Quis tortor</h4>
-            <p>Curabitur suscipit porttitor aliquam. Etiam id placerat purus. Integer sodales elit eget arcu
-                placerat.</p>
-            <a href="single.html">Read More</a>
+            <h4>去官方主页</h4>
+            <p>没有找到想看的内容？那么请大力点击下面按钮！</p>
+            <a href="https://lol.qq.com/">Go</a>
         </div>
         <div class="col-md-3 service-grid-agileits">
             <span class="glyphicon glyphicon-random" aria-hidden="true"></span>
-            <h4>Eget arcu</h4>
-            <p>Curabitur suscipit porttitor aliquam. Etiam id placerat purus. Integer sodales elit eget arcu
-                placerat.</p>
-            <a href="single.html">Read More</a>
+            <h4>官方资料库</h4>
+            <p>觉得在这看的意犹未尽么？那么就点击下面按钮吧！</p>
+            <a href="https://lol.qq.com/data/info-heros.shtml">Go</a>
         </div>
         <div class="col-md-3 service-grid-agileits service-grid-agileits-bottom">
             <span class="glyphicon glyphicon-yen" aria-hidden="true"></span>
-            <h4>Risus porta</h4>
-            <p>Curabitur suscipit porttitor aliquam. Etiam id placerat purus. Integer sodales elit eget arcu
-                placerat.</p>
-            <a href="single.html">Read More</a>
+            <h4>去官方商城</h4>
+            <p>什么？看的心里蠢蠢欲动？想要购买周边商品？那还犹豫什么，点啊！</p>
+            <a href="https://lolriotmall.qq.com/index.shtml?ADTAG=lol.rk.gw.top&adunionsid=gwtop">Go</a>
         </div>
         <div class="col-md-3 service-grid-agileits service-grid-agileits-bottom">
             <span class="glyphicon glyphicon-object-align-right" aria-hidden="true"></span>
-            <h4>Proin sapien</h4>
-            <p>Curabitur suscipit porttitor aliquam. Etiam id placerat purus. Integer sodales elit eget arcu
-                placerat.</p>
-            <a href="single.html">Read More</a>
+            <h4>去看官方赛事</h4>
+            <p>光看介绍不爽？想看官方赛事？请猛戳！</p>
+            <a href="https://lpl.qq.com/es/lpl/2019/?ADTAG=innercop.lol.web.top">Go</a>
         </div>
         <div class="clearfix"></div>
     </div>
@@ -186,61 +182,61 @@
 <!-- new games -->
 <div class="new-w3-agile">
     <div class="container">
-        <h3>New Games</h3>
+        <h3>其他游戏</h3>
         <div class="col-md-3 new-grid-w3l view view-eighth">
             <img src="/static/images/ng1.jpg" alt=" "/>
             <div class="mask">
-                <a href="single.html"><h4>Click here</h4></a>
-                <p>To learn more about this</p>
+                <a href="{% url 'gametest:games' %}"><h4>点我</h4></a>
+                <p>去看看</p>
             </div>
         </div>
         <div class="col-md-3 new-grid-w3l view view-eighth">
             <img src="/static/images/ng2.jpg" alt=" "/>
             <div class="mask">
-                <a href="single.html"><h4>Click here</h4></a>
-                <p>To learn more about this</p>
+               <a href="{% url 'gametest:games' %}"><h4>点我</h4></a>
+                <p>去看看</p>
             </div>
         </div>
         <div class="col-md-3 new-grid-w3l view view-eighth">
             <img src="/static/images/ng3.jpg" alt=" "/>
             <div class="mask">
-                <a href="single.html"><h4>Click here</h4></a>
-                <p>To learn more about this</p>
+                <a href="{% url 'gametest:games' %}"><h4>点我</h4></a>
+                <p>去看看</p>
             </div>
         </div>
         <div class="col-md-3 new-grid-w3l view view-eighth">
             <img src="/static/images/ng4.jpg" alt=" "/>
             <div class="mask">
-                <a href="single.html"><h4>Click here</h4></a>
-                <p>To learn more about this</p>
+               <a href="{% url 'gametest:games' %}"><h4>点我</h4></a>
+                <p>去看看</p>
             </div>
         </div>
         <div class="col-md-3 new-grid-agile view view-eighth">
             <img src="/static/images/ng5.jpg" alt=" "/>
             <div class="mask">
-                <a href="single.html"><h4>Click here</h4></a>
-                <p>To learn more about this</p>
+               <a href="{% url 'gametest:games' %}"><h4>点我</h4></a>
+                <p>去看看</p>
             </div>
         </div>
         <div class="col-md-3 new-grid-agile view view-eighth">
             <img src="/static/images/ng6.jpg" alt=" "/>
             <div class="mask">
-                <a href="single.html"><h4>Click here</h4></a>
-                <p>To learn more about this</p>
+               <a href="{% url 'gametest:games' %}"><h4>点我</h4></a>
+                <p>去看看</p>
             </div>
         </div>
         <div class="col-md-3 new-grid-agile view view-eighth">
             <img src="/static/images/ng7.jpg" alt=" "/>
             <div class="mask">
-                <a href="single.html"><h4>Click here</h4></a>
-                <p>To learn more about this</p>
+              <a href="{% url 'gametest:games' %}"><h4>点我</h4></a>
+                <p>去看看</p>
             </div>
         </div>
         <div class="col-md-3 new-grid-agile view view-eighth">
             <img src="/static/images/ng8.jpg" alt=" "/>
             <div class="mask">
-                <a href="single.html"><h4>Click here</h4></a>
-                <p>To learn more about this</p>
+               <a href="{% url 'gametest:games' %}"><h4>点我</h4></a>
+                <p>去看看</p>
             </div>
         </div>
         <div class="clearfix"></div>
@@ -303,64 +299,61 @@
 <div class="footer">
     <div class="container">
         <div class="col-md-3 footer-left-w3">
-            <h4>Contact</h4>
+            <h4>联系</h4>
             <ul>
                 <li><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span></li>
-                <li><a href="mailto:example@mail.com"><h6>ex@mail.com</h6></a></li>
+                <li><a href="mailto:example@mail.com"><h6>826918436@qq.com</h6></a></li>
             </ul>
             <ul>
                 <li><span class="glyphicon glyphicon-earphone" aria-hidden="true"></span></li>
-                <li><h6>+18045678834</h6></li>
+                <li><h6>18903849270</h6></li>
             </ul>
             <ul>
                 <li><span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span></li>
-                <li><h6>4th Avenue,London</h6></li>
+                <li><h6>郑州金水西路月季公园</h6></li>
             </ul>
             <ul>
                 <li><span class="glyphicon glyphicon-phone-alt" aria-hidden="true"></span></li>
-                <li><h6>(0033)6544 5453 644</h6></li>
+                <li><h6>400 820 820 820</h6></li>
             </ul>
         </div>
         <div class="col-md-5 footer-middle-w3">
-            <h4>Latest Games</h4>
-            <div class="col-md-3 img-w3-agile">
-                <a href="single.html"><img src="/static/images/ng1.jpg" alt=" "/></a>
-            </div>
-            <div class="col-md-3 img-w3-agile">
-                <a href="single.html"><img src="/static/images/ng2.jpg" alt=" "/></a>
-            </div>
-            <div class="col-md-3 img-w3-agile">
-                <a href="single.html"><img src="/static/images/ng3.jpg" alt=" "/></a>
-            </div>
-            <div class="col-md-3 img-w3-agile">
-                <a href="single.html"><img src="/static/images/ng4.jpg" alt=" "/></a>
-            </div>
-            <div class="col-md-3 img-w3-agile footer-middle-wthree">
-                <a href="single.html"><img src="/static/images/ng5.jpg" alt=" "/></a>
-            </div>
-            <div class="col-md-3 img-w3-agile footer-middle-wthree">
-                <a href="single.html"><img src="/static/images/ng6.jpg" alt=" "/></a>
-            </div>
-            <div class="col-md-3 img-w3-agile footer-middle-wthree">
-                <a href="single.html"><img src="/static/images/ng7.jpg" alt=" "/></a>
-            </div>
-            <div class="col-md-3 img-w3-agile footer-middle-wthree">
-                <a href="single.html"><img src="/static/images/ng8.jpg" alt=" "/></a>
-            </div>
+            <h4>猜你喜欢</h4>
+			<div class="col-md-3 img-w3-agile">
+				<a href="{% url 'gametest:single' 7 %}"><img src="/static/images/锤石.jpg" alt=" " /></a>
+			</div>
+			<div class="col-md-3 img-w3-agile">
+				<a href="{% url 'gametest:single' 2 %}"><img src="/static/images/诺手.jpg" alt=" " /></a>
+			</div>
+			<div class="col-md-3 img-w3-agile">
+				<a href="{% url 'gametest:single' 4 %}"><img src="/static/images/金克斯.jpg" alt=" " /></a>
+			</div>
+			<div class="col-md-3 img-w3-agile">
+				<a href="{% url 'gametest:single' 3 %}"><img src="/static/images/盲僧.jpg" alt=" " /></a>
+			</div>
+			<div class="col-md-3 img-w3-agile footer-middle-wthree">
+				<a href="{% url 'gametest:single' 12 %}"><img src="/static/images/科加斯.jpg" alt=" " /></a>
+			</div>
+			<div class="col-md-3 img-w3-agile footer-middle-wthree">
+				<a href="{% url 'gametest:single' 9 %}"><img src="/static/images/狐狸.jpg" alt=" " /></a>
+			</div>
+			<div class="col-md-3 img-w3-agile footer-middle-wthree">
+				<a href="{% url 'gametest:single' 10 %}"><img src="/static/images/剑圣.jpg" alt=" " /></a>
+			</div>
+			<div class="col-md-3 img-w3-agile footer-middle-wthree">
+				<a href="{% url 'gametest:single' 8 %}"><img src="/static/images/盖伦.jpg" alt=" " /></a>
+			</div>
             <div class="clearfix"></div>
         </div>
         <div class="col-md-4 footer-right-w3">
-            <a href="index.html"><h4>Games <img src="/static/images/f1.png" alt=" "/> Zone</h4></a>
-            <p>Donec lobortis diam eu auctor porta. Phasellus in elementum tortor, sit amet imperdiet urna pellentesque
-                non risus porta.</p>
-            <p class="agileinfo">Suspendisse convallis malesuada libero, non rutrum arcu pellentesque lacinia.</p>
-        </div>
-        <div class="clearfix"></div>
-        <div class="copyright">
-            <p>Copyright &copy; 2017.Company name All rights reserved.More Templates <a href="http://www.cssmoban.com/"
-                                                                                        target="_blank" title="模板之家">模板之家</a>
-                - Collect from <a href="http://www.cssmoban.com/" title="网页模板" target="_blank">网页模板</a></p>
-        </div>
+			<a href="index.html"><h4>英雄 <img src="/static/images/f1.png" alt=" " /> 介绍</h4></a>
+			<p>还喜欢本网站么？不喜欢也得喜欢！赶紧收藏加设为主页！</p>
+			<p class="agileinfo">什么？你说很辣鸡？我心里当然有数!还用你说啊！</p>
+		</div>
+		<div class="clearfix"></div>
+		<div class="copyright">
+			<p>Copyright &copy; 2017.Company name LOL home. <a href="https://lol.qq.com/" target="_blank" title="英雄联盟之家">英雄联盟之家</a> - Collect from <a href="https://lol.qq.com/" title="网页模板" target="_blank">英雄联盟</a></p>
+		</div>
     </div>
 </div>
 
